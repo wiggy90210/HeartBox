@@ -18,9 +18,9 @@
         app:layout_constraintTop_toTopOf="@+id/animationView" />
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:lottie_rawRes="@raw/fireworks"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_rawRes="@raw/burst"
         app:lottie_speed="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
