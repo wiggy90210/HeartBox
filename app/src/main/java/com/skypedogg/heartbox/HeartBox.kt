@@ -3,34 +3,45 @@ package com.skypedogg.heartbox
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.widget.CheckBox
-import android.widget.LinearLayout
-import android.widget.RadioGroup
-import androidx.appcompat.widget.*
+import android.widget.Checkable
+import android.widget.CompoundButton
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.airbnb.lottie.LottieAnimationView
+import kotlinx.android.synthetic.main.heartbox_layout.view.*
 
 class HeartBox(
     context: Context,
-    attrs: AttributeSet
-) : ConstraintLayout(context, attrs) {
+    attrs: AttributeSet?
+) : ConstraintLayout(context, attrs), Checkable {
 
-    private var checkBox: AppCompatCheckBox
-    private var animation: LottieAnimationView
+    var mListener: HeartboxCheckedChangeListener? = null
 
     init {
-        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = inflater.inflate(R.layout.heartbox_layout, this, true)
-        checkBox = view.findViewById(R.id.checkbox)
-        animation = view.findViewById(R.id.animationView)
+        LayoutInflater.from(context).inflate(R.layout.heartbox_layout, this)
 
-        checkBox.setOnCheckedChangeListener { _, b ->
-            if (b) animation.playAnimation()
+        checkbox.setOnCheckedChangeListener { compoundButton, b ->
+            if (b) animationView.playAnimation()
+            mListener?.onCheckedChange(compoundButton, b)
         }
     }
 
+    override fun setChecked(checked: Boolean) {
+        checkbox.isChecked = checked
+    }
 
+    override fun isChecked(): Boolean {
+        return checkbox.isChecked
+    }
 
+    override fun toggle() {
+        checkbox.isChecked = !checkbox.isChecked
+    }
 
+    fun setHeartboxCheckedChangeListener(listener: HeartboxCheckedChangeListener) {
+        mListener = listener
+    }
+
+    interface HeartboxCheckedChangeListener {
+        fun onCheckedChange(compoundButton: CompoundButton, checked: Boolean)
+    }
 
 }
