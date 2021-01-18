@@ -30,7 +30,9 @@ class HeartBox(
     private fun initAmiationView(ctx: Context, attrs: AttributeSet?) {
         attrs?.let {
             val a: TypedArray = ctx.obtainStyledAttributes(it, R.styleable.HeartBox)
-            animationView.setAnimation(a.getResourceId(R.styleable.HeartBox_animation, R.raw.burst))
+            animationView.setAnimation(a.getResourceId(R.styleable.HeartBox_checkAnim, R.raw.burst))
+            animationView.speed = a.getFloat(R.styleable.HeartBox_animSpeed, 2f).toFloat()
+            animationView.repeatCount = a.getInt(R.styleable.HeartBox_animRepeatCount, 1)
         }
     }
 
@@ -44,6 +46,10 @@ class HeartBox(
 
     override fun toggle() {
         checkbox.isChecked = !checkbox.isChecked
+    }
+
+    fun isAnimating(): Boolean {
+        return animationView.isAnimating
     }
 
     fun setHeartboxCheckedChangeListener(listener: HeartboxCheckedChangeListener) {

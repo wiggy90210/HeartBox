@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HeartBox">
+        <attr name="checkAnim" format="reference"/>
+        <attr name="animSpeed" format="float"/>
+        <attr name="animRepeatCount" format="integer"/>
+    </declare-styleable>
+</resources>

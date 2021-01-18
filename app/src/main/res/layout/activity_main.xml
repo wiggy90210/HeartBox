@@ -20,7 +20,7 @@
         android:id="@+id/heartbox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:animation="@raw/blast"
+        app:checkAnim="@raw/blast"
         />
         <TextView
             android:id="@+id/textview1"
@@ -38,7 +38,7 @@
             android:id="@+id/heartbox2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:animation="@raw/burst"
+            app:checkAnim="@raw/burst"
             />
         <TextView
             android:id="@+id/textview2"
@@ -56,7 +56,7 @@
             android:id="@+id/heartbox3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:animation="@raw/burst_in_the_moon"
+            app:checkAnim="@raw/burst_in_the_moon"
             />
         <TextView
             android:id="@+id/textview3"
@@ -74,7 +74,7 @@
             android:id="@+id/heartbox4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:animation="@raw/explode_memphis"
+            app:checkAnim="@raw/explode_memphis"
             />
         <TextView
             android:id="@+id/textview4"
@@ -92,7 +92,7 @@
             android:id="@+id/heartbox5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:animation="@raw/exploding_heart"
+            app:checkAnim="@raw/exploding_heart"
             />
         <TextView
             android:id="@+id/textview5"
@@ -110,7 +110,7 @@
             android:id="@+id/heartbox6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:animation="@raw/fireworks"
+            app:checkAnim="@raw/fireworks"
             />
         <TextView
             android:id="@+id/textview6"
@@ -128,7 +128,7 @@
             android:id="@+id/heartbox7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:animation="@raw/fireworks_star"
+            app:checkAnim="@raw/fireworks_star"
             />
         <TextView
             android:id="@+id/textview7"
@@ -146,7 +146,7 @@
             android:id="@+id/heartbox8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:animation="@raw/happy_fireworks"
+            app:checkAnim="@raw/happy_fireworks"
             />
         <TextView
             android:id="@+id/textview8"
@@ -164,7 +164,7 @@
             android:id="@+id/heartbox9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:animation="@raw/light_explosion"
+            app:checkAnim="@raw/light_explosion"
             />
         <TextView
             android:id="@+id/textview9"
