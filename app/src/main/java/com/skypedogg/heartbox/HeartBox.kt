@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.CheckBox
 import android.widget.Checkable
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.heartbox_layout.view.*
 
 class HeartBox(
@@ -17,12 +18,15 @@ class HeartBox(
 
     init {
         LayoutInflater.from(context).inflate(R.layout.heartbox_layout, this)
+        val heart = ContextCompat.getDrawable(context, R.drawable.heart_checked)
+        animationView.layoutParams = ConstraintLayout.LayoutParams(heart!!.minimumWidth, heart!!.minimumHeight)
 
         checkbox.setOnClickListener { view ->
             val checkbox = view as CheckBox
             if (checkbox.isChecked) animationView.playAnimation()
             mListener?.onCheckedChange(checkbox.isChecked)
         }
+
     }
 
     override fun setChecked(checked: Boolean) {

@@ -12,7 +12,6 @@
             android:id="@+id/heartbox6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:checkAnim="@raw/fireworks"
             />
         <TextView
             android:id="@+id/textview6"
