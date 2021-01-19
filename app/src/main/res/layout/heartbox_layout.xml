@@ -20,7 +20,7 @@
         android:id="@+id/animationView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:lottie_rawRes="@raw/burst"
+        app:lottie_rawRes="@raw/fireworks"
         app:lottie_speed="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
